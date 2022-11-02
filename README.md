@@ -147,7 +147,7 @@ ActivityKitManager.start(ExampleAttributes.self, state, id)
 ##### Update all Live Activities
 ```swift
 let state = ExampleAttributes.LiveWidgetStatus(...)
-ActivityKitManager.start(ExampleAttributes.self, state, nil)
+ActivityKitManager.start(ExampleAttributes.self, state)
 ```
 
 ##### Stop a Live Activity
@@ -157,14 +157,15 @@ ActivityKitManager.stop(ExampleAttributes.self, "ABC123"))
 
 ##### Stop all Live Activities
 ```swift
-ActivityKitManager.stop(ExampleAttributes.self, nil))
+ActivityKitManager.stop(ExampleAttributes.self))
 ```
 
-##### Get a dictionnary of APN push tokens
+##### Get a dictionnary of all APN push tokens
 ```swift
-print(ActivityKitManager.getAPNtoken(ExampleAttributes.self, nil))
+print(ActivityKitManager.getAPNtoken(ExampleAttributes.self))
 // [ABC123 : ABC123, ..., DEF456 : DEF456]
 ```
+
 ##### Get a dictionnary of APN push tokens
 ```swift
 print(ActivityKitManager.getAPNtoken(ExampleAttributes.self, "ABC123"))
